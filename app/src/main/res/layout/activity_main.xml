@@ -46,6 +46,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/textView2"
+        android:checkedButton="@+id/suma"
         android:id="@+id/radioGroup"
         tools:layout_constraintTop_creator="1"
         android:layout_marginStart="26dp"
@@ -60,7 +61,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="onRadioButtonClicked"
             android:text="+" />
 
         <RadioButton
@@ -68,7 +68,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="onRadioButtonClicked"
             android:text="-" />
 
         <RadioButton
@@ -76,15 +75,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="onRadioButtonClicked"
-            android:text="x" />
+            android:text="*" />
 
         <RadioButton
             android:id="@+id/division"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="onRadioButtonClicked"
             android:text="/" />
 
     </RadioGroup>
@@ -119,7 +116,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/res"
         app:layout_constraintLeft_toLeftOf="@+id/radioGroup"
-        android:onClick="getOperacion"
+        android:onClick="result"
         app:layout_constraintHorizontal_bias="1.0" />
 
     <EditText
@@ -154,7 +151,7 @@
         app:layout_constraintTop_toBottomOf="@+id/res"
         tools:layout_constraintLeft_creator="1"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:onClick="setValuesToCero"
+        android:onClick="reset"
         app:layout_constraintHorizontal_bias="0.93" />
 
     <Button
@@ -169,6 +166,6 @@
         tools:layout_constraintLeft_creator="1"
         android:layout_marginBottom="16dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:onClick="goToListaOperaciones"/>
+        android:onClick="history"/>
 
 </android.support.constraint.ConstraintLayout>
